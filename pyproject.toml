@@ -1,0 +1,31 @@
+[project]
+name = "many_shot_jailbreak"
+version = "0.0.1"
+description = "Template repo for Guardrails Hub validators."
+authors = [
+    {name = "Guardrails AI", email = "contact@guardrailsai.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">= 3.8.1"
+dependencies = [
+    "guardrails-ai>=0.4.0",
+    "huggingface_hub",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyright",
+    "pytest",
+    "ruff"
+] 
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-rP"
+testpaths = [
+    "tests"
+]
+
+[tool.pyright]
+include = ["validator"]
