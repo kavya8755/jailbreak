@@ -58,8 +58,8 @@ class DetectManyShotJailbreak(Validator):
     def __init__(
         self,
         num_few_shot_examples: int = 64,
-        on_fail: Optional[Callable] = None,
         api_endpoint: str = None,
+        on_fail: Optional[Callable] = None,
     ):
         super().__init__(on_fail=on_fail, num_few_shot_examples=num_few_shot_examples)
         self.num_few_shot_examples = num_few_shot_examples
